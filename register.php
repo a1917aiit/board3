@@ -4,7 +4,7 @@ require_once('config.php');
 try {
   $pdo = new PDO(DSN, DB_USER, DB_PASS);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $pdo->exec("create table if not exists userDeta(
+  $pdo->exec("create table if not exists users(
       id int not null auto_increment primary key,
       username varchar(255),
       password varchar(255),
